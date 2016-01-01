@@ -1,0 +1,23 @@
+
+function truncate(str, num) {
+ 
+  var truncatedWord = "";
+  
+  if(str.length <= num) {
+    truncatedWord = str.slice(0, num);
+    //document.write(truncatedWord);
+    return truncatedWord;
+  } else if(num > 3) {
+    truncatedWord = str.slice(0, num - 3);
+    truncatedWord += "...";
+    //document.write(truncatedWord);
+    return truncatedWord;
+  } else {
+    truncatedWord = str.slice(0, num);
+    truncatedWord += "...";
+    return truncatedWord;
+  }
+
+}
+
+truncate("A-tisket a-tasket A green and yellow basket", 11);
