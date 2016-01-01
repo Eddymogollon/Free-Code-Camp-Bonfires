@@ -1,0 +1,38 @@
+function largestOfFour(arr) {
+  
+  var largestNumber = 0;
+  var emptyArr = []; 
+  
+  for(var i = 0; i < arr.length; i++) {
+  
+    largestNumber = arr[i][0];  
+    
+    for(var j = 0; j < arr[i].length; j++) {
+      
+      //document.write(arr[i][j] + " ");
+      
+      if(arr[i][j] > largestNumber) {
+          largestNumber = arr[i][j];
+        
+      //document.write(largestNumber + " ");
+      }
+      
+      if(arr[i][j] == arr[i][arr[i].length - 1]) {
+        //document.write(largestNumber + " ");  
+        emptyArr.push(largestNumber);  
+      }
+
+      //After getting the highest number of arr[i], push to array and continue to next iteration.
+      //Start pushing the largest number to an array
+    }   
+  }
+  
+  return emptyArr;
+}
+
+largestOfFour([
+                [4, 5, 1, 3], 
+                [13, 27, 18, 26], 
+                [32, 35, 37, 39], 
+                [1000, 1001, 857, 1]
+              ]);
