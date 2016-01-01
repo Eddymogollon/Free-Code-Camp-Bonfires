@@ -1,0 +1,17 @@
+
+function repeat(str, num) {
+  
+  var oldStr = str;
+  
+  if(num <= 0) {
+    //document.write("");
+    return "";
+  }
+  
+  for(var i = 0; i < num - 1; i++) {
+    str += oldStr;  
+  }
+ 
+  //document.write(str);
+  return str;
+}
