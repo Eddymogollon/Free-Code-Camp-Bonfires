@@ -1,0 +1,42 @@
+function chunk(arr, size) {
+  
+  var emptyArray = [];
+  var anArray = [];
+  
+  while(arr.length !== 0) {
+    emptyArray = arr.splice(0, size);
+    //console.log(emptyArray);
+    anArray.push(emptyArray);
+  }
+  
+  console.log(anArray);
+  
+  /*var emptyArray;
+  var empArray;
+  var emArray;
+  
+  var anArray = [];
+  
+  emptyArray = arr.splice(0, size);
+  //console.log(arr);
+  //console.log(emptyArray);
+  
+  empArray = arr.splice(0, size);
+  //console.log(arr);
+  //console.log(empArray);
+  
+  anArray = arr.push(emptyArray);
+  anArray = arr.push(empArray);
+  
+  console.log(arr);
+  */
+  return anArray;
+}
+
+
+chunk(["a", "b", "c", "d"], 2);
+chunk([0, 1, 2, 3, 4, 5], 3);
+chunk([0, 1, 2, 3, 4, 5], 2);
+chunk([0, 1, 2, 3, 4, 5], 4);
+chunk([0, 1, 2, 3, 4, 5, 6], 3);
+chunk([0, 1, 2, 3, 4, 5, 6, 7, 8], 4);
