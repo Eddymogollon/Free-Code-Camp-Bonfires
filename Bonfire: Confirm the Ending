@@ -1,0 +1,17 @@
+function end(str, target) {
+  
+  var startOfLetters = str.length - target.length;
+  var numberOfLetters = str.length;
+  
+  //document.write(str.substr(startOfLetters, str.numberOfLetters));
+  //document.write(target);
+  
+  if(str.substr(startOfLetters, numberOfLetters) == target) {
+    return true;
+  } else {
+    return false;
+  }
+  
+}
+
+end("Bastian", "n");
