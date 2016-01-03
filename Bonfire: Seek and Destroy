@@ -1,0 +1,18 @@
+function destroyer(arr) {
+  
+  var array = arguments[0];  
+  var funcArguments;
+  
+  function seeker(val) {
+    return val !== funcArguments;
+  }
+  
+  for(var i = 1; i < arguments.length; i++) {
+    funcArguments = arguments[i];
+    array = array.filter(seeker);  
+  }
+  
+  return array;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
