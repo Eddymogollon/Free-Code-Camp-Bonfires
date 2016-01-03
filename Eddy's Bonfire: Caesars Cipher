@@ -1,0 +1,30 @@
+function rot13(encodedStr) {
+  var codeArr = encodedStr.split("");  // String to Array
+  var decodedArr = []; // Your Result goes here
+  
+  // Only change code below this line
+  
+  for(var i = 0; i < codeArr.length; i++) {    
+    
+    if(codeArr[i].toUpperCase() !== codeArr[i].toLowerCase()) {
+      codeArr[i] = codeArr[i].charCodeAt();
+      codeArr[i] = codeArr[i] + 13;
+      if(codeArr[i] > 90) {
+        codeArr[i] = codeArr[i] - 26;
+      }
+    } else {
+      codeArr[i] = codeArr[i].charCodeAt();
+    }
+    
+    decodedArr[i] = String.fromCharCode(codeArr[i]);
+    
+  }
+    
+  //console.log(decodedArr);
+  
+  // Only change code above this line
+  return decodedArr.join(""); // Array to String
+}
+
+// Change the inputs below to test
+rot13("SERR PBQR PNZC");
