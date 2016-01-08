@@ -1,0 +1,21 @@
+function sumAll(arr) {
+
+  var maxNumber = Math.max(arr[0], arr[1]);
+  var minNumber = Math.min(arr[0], arr[1]);
+
+  var numbersBetween = maxNumber - minNumber;
+  var substracter = 1; //Used to push numbers into the array
+  
+  for(var i = 1; i < numbersBetween; i++, substracter++) {
+    arr.push(maxNumber - substracter);  
+    console.log(arr);
+  }
+  
+  var total = arr.reduce(function(a, b) {
+    return a + b;
+  });
+
+  return total;
+}
+
+sumAll([1, 4]);
