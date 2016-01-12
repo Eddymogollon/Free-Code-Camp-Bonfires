@@ -1,0 +1,23 @@
+function translate(str) {
+  
+  var firstLetter = str.substring(0, 1);
+  var secondLetter = str.substring(1, 2);
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  
+  str = str.split("");  
+  
+  if(vowels.indexOf(firstLetter.toLowerCase()) !== -1) {
+    str.push('w', 'a', 'y');
+  } else if(vowels.indexOf(secondLetter.toLowerCase()) === -1) {
+    str.push(firstLetter, secondLetter, 'a', 'y');
+    str.splice(0, 2);
+  } else {
+    str.push(firstLetter, 'a', 'y');
+    str.splice(0, 1);
+  }
+    
+  str = str.join("");
+   return str;
+}
+
+translate("glove");
